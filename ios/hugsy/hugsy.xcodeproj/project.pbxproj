@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27BA30572BB2E9070043399B /* HugsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30562BB2E9070043399B /* HugsyApp.swift */; };
+		27BA30592BB2E9070043399B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30582BB2E9070043399B /* ContentView.swift */; };
+		27BA305B2BB2E90B0043399B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BA305A2BB2E90B0043399B /* Assets.xcassets */; };
+		27BA305E2BB2E90B0043399B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BA305D2BB2E90B0043399B /* Preview Assets.xcassets */; };
+		27BA30602BB2E90B0043399B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA305F2BB2E90B0043399B /* Persistence.swift */; };
+		27BA30632BB2E90B0043399B /* Hugsy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30612BB2E90B0043399B /* Hugsy.xcdatamodeld */; };
+		27BA306E2BB2E90B0043399B /* HugsyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA306D2BB2E90B0043399B /* HugsyTests.swift */; };
+		27BA30782BB2E90C0043399B /* HugsyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30772BB2E90C0043399B /* HugsyUITests.swift */; };
+		27BA307A2BB2E90C0043399B /* HugsyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30792BB2E90C0043399B /* HugsyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27BA306A2BB2E90B0043399B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27BA304B2BB2E9070043399B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27BA30522BB2E9070043399B;
+			remoteInfo = Hugsy;
+		};
+		27BA30742BB2E90C0043399B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27BA304B2BB2E9070043399B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27BA30522BB2E9070043399B;
+			remoteInfo = Hugsy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27BA30532BB2E9070043399B /* Hugsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hugsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BA30562BB2E9070043399B /* HugsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyApp.swift; sourceTree = "<group>"; };
+		27BA30582BB2E9070043399B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		27BA305A2BB2E90B0043399B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27BA305D2BB2E90B0043399B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		27BA305F2BB2E90B0043399B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		27BA30622BB2E90B0043399B /* Hugsy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hugsy.xcdatamodel; sourceTree = "<group>"; };
+		27BA30642BB2E90B0043399B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27BA30692BB2E90B0043399B /* HugsyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HugsyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BA306D2BB2E90B0043399B /* HugsyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyTests.swift; sourceTree = "<group>"; };
+		27BA30732BB2E90C0043399B /* HugsyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HugsyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BA30772BB2E90C0043399B /* HugsyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyUITests.swift; sourceTree = "<group>"; };
+		27BA30792BB2E90C0043399B /* HugsyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27BA30502BB2E9070043399B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BA30662BB2E90B0043399B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BA30702BB2E90C0043399B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27BA304A2BB2E9070043399B = {
+			isa = PBXGroup;
+			children = (
+				27BA30552BB2E9070043399B /* Hugsy */,
+				27BA306C2BB2E90B0043399B /* HugsyTests */,
+				27BA30762BB2E90C0043399B /* HugsyUITests */,
+				27BA30542BB2E9070043399B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27BA30542BB2E9070043399B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27BA30532BB2E9070043399B /* Hugsy.app */,
+				27BA30692BB2E90B0043399B /* HugsyTests.xctest */,
+				27BA30732BB2E90C0043399B /* HugsyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27BA30552BB2E9070043399B /* Hugsy */ = {
+			isa = PBXGroup;
+			children = (
+				27BA30562BB2E9070043399B /* HugsyApp.swift */,
+				27BA30582BB2E9070043399B /* ContentView.swift */,
+				27BA305A2BB2E90B0043399B /* Assets.xcassets */,
+				27BA305F2BB2E90B0043399B /* Persistence.swift */,
+				27BA30642BB2E90B0043399B /* Info.plist */,
+				27BA30612BB2E90B0043399B /* Hugsy.xcdatamodeld */,
+				27BA305C2BB2E90B0043399B /* Preview Content */,
+			);
+			path = Hugsy;
+			sourceTree = "<group>";
+		};
+		27BA305C2BB2E90B0043399B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				27BA305D2BB2E90B0043399B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		27BA306C2BB2E90B0043399B /* HugsyTests */ = {
+			isa = PBXGroup;
+			children = (
+				27BA306D2BB2E90B0043399B /* HugsyTests.swift */,
+			);
+			path = HugsyTests;
+			sourceTree = "<group>";
+		};
+		27BA30762BB2E90C0043399B /* HugsyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27BA30772BB2E90C0043399B /* HugsyUITests.swift */,
+				27BA30792BB2E90C0043399B /* HugsyUITestsLaunchTests.swift */,
+			);
+			path = HugsyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27BA30522BB2E9070043399B /* Hugsy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BA307D2BB2E90C0043399B /* Build configuration list for PBXNativeTarget "Hugsy" */;
+			buildPhases = (
+				27BA304F2BB2E9070043399B /* Sources */,
+				27BA30502BB2E9070043399B /* Frameworks */,
+				27BA30512BB2E9070043399B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hugsy;
+			productName = Hugsy;
+			productReference = 27BA30532BB2E9070043399B /* Hugsy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27BA30682BB2E90B0043399B /* HugsyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BA30802BB2E90C0043399B /* Build configuration list for PBXNativeTarget "HugsyTests" */;
+			buildPhases = (
+				27BA30652BB2E90B0043399B /* Sources */,
+				27BA30662BB2E90B0043399B /* Frameworks */,
+				27BA30672BB2E90B0043399B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27BA306B2BB2E90B0043399B /* PBXTargetDependency */,
+			);
+			name = HugsyTests;
+			productName = HugsyTests;
+			productReference = 27BA30692BB2E90B0043399B /* HugsyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27BA30722BB2E90C0043399B /* HugsyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BA30832BB2E90C0043399B /* Build configuration list for PBXNativeTarget "HugsyUITests" */;
+			buildPhases = (
+				27BA306F2BB2E90C0043399B /* Sources */,
+				27BA30702BB2E90C0043399B /* Frameworks */,
+				27BA30712BB2E90C0043399B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27BA30752BB2E90C0043399B /* PBXTargetDependency */,
+			);
+			name = HugsyUITests;
+			productName = HugsyUITests;
+			productReference = 27BA30732BB2E90C0043399B /* HugsyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27BA304B2BB2E9070043399B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					27BA30522BB2E9070043399B = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					27BA30682BB2E90B0043399B = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 27BA30522BB2E9070043399B;
+					};
+					27BA30722BB2E90C0043399B = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 27BA30522BB2E9070043399B;
+					};
+				};
+			};
+			buildConfigurationList = 27BA304E2BB2E9070043399B /* Build configuration list for PBXProject "Hugsy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27BA304A2BB2E9070043399B;
+			productRefGroup = 27BA30542BB2E9070043399B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27BA30522BB2E9070043399B /* Hugsy */,
+				27BA30682BB2E90B0043399B /* HugsyTests */,
+				27BA30722BB2E90C0043399B /* HugsyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27BA30512BB2E9070043399B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BA305E2BB2E90B0043399B /* Preview Assets.xcassets in Resources */,
+				27BA305B2BB2E90B0043399B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BA30672BB2E90B0043399B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BA30712BB2E90C0043399B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27BA304F2BB2E9070043399B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BA30602BB2E90B0043399B /* Persistence.swift in Sources */,
+				27BA30592BB2E9070043399B /* ContentView.swift in Sources */,
+				27BA30632BB2E90B0043399B /* Hugsy.xcdatamodeld in Sources */,
+				27BA30572BB2E9070043399B /* HugsyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BA30652BB2E90B0043399B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BA306E2BB2E90B0043399B /* HugsyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BA306F2BB2E90C0043399B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BA30782BB2E90C0043399B /* HugsyUITests.swift in Sources */,
+				27BA307A2BB2E90C0043399B /* HugsyUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27BA306B2BB2E90B0043399B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27BA30522BB2E9070043399B /* Hugsy */;
+			targetProxy = 27BA306A2BB2E90B0043399B /* PBXContainerItemProxy */;
+		};
+		27BA30752BB2E90C0043399B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27BA30522BB2E9070043399B /* Hugsy */;
+			targetProxy = 27BA30742BB2E90C0043399B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		27BA307B2BB2E90C0043399B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27BA307C2BB2E90C0043399B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27BA307E2BB2E90C0043399B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hugsy/Preview Content\"";
+				DEVELOPMENT_TEAM = DCAZQ9Q5D9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.terrisson.hugsy.Hugsy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27BA307F2BB2E90C0043399B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hugsy/Preview Content\"";
+				DEVELOPMENT_TEAM = DCAZQ9Q5D9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.terrisson.hugsy.Hugsy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		27BA30812BB2E90C0043399B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCAZQ9Q5D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.terrisson.hugsy.HugsyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hugsy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hugsy";
+			};
+			name = Debug;
+		};
+		27BA30822BB2E90C0043399B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCAZQ9Q5D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.terrisson.hugsy.HugsyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hugsy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hugsy";
+			};
+			name = Release;
+		};
+		27BA30842BB2E90C0043399B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCAZQ9Q5D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.terrisson.hugsy.HugsyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hugsy;
+			};
+			name = Debug;
+		};
+		27BA30852BB2E90C0043399B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCAZQ9Q5D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.terrisson.hugsy.HugsyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hugsy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27BA304E2BB2E9070043399B /* Build configuration list for PBXProject "Hugsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BA307B2BB2E90C0043399B /* Debug */,
+				27BA307C2BB2E90C0043399B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27BA307D2BB2E90C0043399B /* Build configuration list for PBXNativeTarget "Hugsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BA307E2BB2E90C0043399B /* Debug */,
+				27BA307F2BB2E90C0043399B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27BA30802BB2E90C0043399B /* Build configuration list for PBXNativeTarget "HugsyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BA30812BB2E90C0043399B /* Debug */,
+				27BA30822BB2E90C0043399B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27BA30832BB2E90C0043399B /* Build configuration list for PBXNativeTarget "HugsyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BA30842BB2E90C0043399B /* Debug */,
+				27BA30852BB2E90C0043399B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27BA30612BB2E90B0043399B /* Hugsy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27BA30622BB2E90B0043399B /* Hugsy.xcdatamodel */,
+			);
+			currentVersion = 27BA30622BB2E90B0043399B /* Hugsy.xcdatamodel */;
+			path = Hugsy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 27BA304B2BB2E9070043399B /* Project object */;
+}
