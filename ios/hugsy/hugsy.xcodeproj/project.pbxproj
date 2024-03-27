@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2791801D2BB35D8600DBEA84 /* StartingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791801C2BB35D8600DBEA84 /* StartingView.swift */; };
 		27BA30572BB2E9070043399B /* HugsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30562BB2E9070043399B /* HugsyApp.swift */; };
 		27BA30592BB2E9070043399B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30582BB2E9070043399B /* ContentView.swift */; };
 		27BA305B2BB2E90B0043399B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BA305A2BB2E90B0043399B /* Assets.xcassets */; };
@@ -16,6 +17,10 @@
 		27BA306E2BB2E90B0043399B /* HugsyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA306D2BB2E90B0043399B /* HugsyTests.swift */; };
 		27BA30782BB2E90C0043399B /* HugsyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30772BB2E90C0043399B /* HugsyUITests.swift */; };
 		27BA307A2BB2E90C0043399B /* HugsyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30792BB2E90C0043399B /* HugsyUITestsLaunchTests.swift */; };
+		27D480BE2BB3F1CD00B8A6DA /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D480BD2BB3F1CD00B8A6DA /* SigninView.swift */; };
+		27D480C02BB4046700B8A6DA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D480BF2BB4046700B8A6DA /* UserData.swift */; };
+		27D480C22BB404A300B8A6DA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D480C12BB404A300B8A6DA /* UserViewModel.swift */; };
+		27D480C42BB4050300B8A6DA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D480C32BB4050300B8A6DA /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2791801C2BB35D8600DBEA84 /* StartingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingView.swift; sourceTree = "<group>"; };
 		27BA30532BB2E9070043399B /* Hugsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hugsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BA30562BB2E9070043399B /* HugsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyApp.swift; sourceTree = "<group>"; };
 		27BA30582BB2E9070043399B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +55,11 @@
 		27BA30732BB2E90C0043399B /* HugsyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HugsyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BA30772BB2E90C0043399B /* HugsyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyUITests.swift; sourceTree = "<group>"; };
 		27BA30792BB2E90C0043399B /* HugsyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27D480BD2BB3F1CD00B8A6DA /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		27D480BF2BB4046700B8A6DA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		27D480C12BB404A300B8A6DA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		27D480C32BB4050300B8A6DA /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		27D480C52BB409C100B8A6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2791801B2BB35D7400DBEA84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27BA30582BB2E9070043399B /* ContentView.swift */,
+				2791801C2BB35D8600DBEA84 /* StartingView.swift */,
+				27D480BD2BB3F1CD00B8A6DA /* SigninView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		27BA304A2BB2E9070043399B = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +120,13 @@
 		27BA30552BB2E9070043399B /* Hugsy */ = {
 			isa = PBXGroup;
 			children = (
-				27BA30562BB2E9070043399B /* HugsyApp.swift */,
-				27BA30582BB2E9070043399B /* ContentView.swift */,
-				27BA305A2BB2E90B0043399B /* Assets.xcassets */,
-				27BA305F2BB2E90B0043399B /* Persistence.swift */,
-				27BA30642BB2E90B0043399B /* Info.plist */,
-				27BA30612BB2E90B0043399B /* Hugsy.xcdatamodeld */,
+				27D480C52BB409C100B8A6DA /* Info.plist */,
+				27D480BC2BB3E91900B8A6DA /* App */,
+				27D480BB2BB3E8B100B8A6DA /* ViewModel */,
+				2791801B2BB35D7400DBEA84 /* View */,
+				27BA30862BB2E9D00043399B /* Model */,
 				27BA305C2BB2E90B0043399B /* Preview Content */,
+				27BA305A2BB2E90B0043399B /* Assets.xcassets */,
 			);
 			path = Hugsy;
 			sourceTree = "<group>";
@@ -133,6 +154,34 @@
 				27BA30792BB2E90C0043399B /* HugsyUITestsLaunchTests.swift */,
 			);
 			path = HugsyUITests;
+			sourceTree = "<group>";
+		};
+		27BA30862BB2E9D00043399B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27BA30612BB2E90B0043399B /* Hugsy.xcdatamodeld */,
+				27D480BF2BB4046700B8A6DA /* UserData.swift */,
+				27D480C32BB4050300B8A6DA /* Api.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27D480BB2BB3E8B100B8A6DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				27D480C12BB404A300B8A6DA /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27D480BC2BB3E91900B8A6DA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				27BA30562BB2E9070043399B /* HugsyApp.swift */,
+				27BA305F2BB2E90B0043399B /* Persistence.swift */,
+				27BA30642BB2E90B0043399B /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +315,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BA30602BB2E90B0043399B /* Persistence.swift in Sources */,
+				27D480C22BB404A300B8A6DA /* UserViewModel.swift in Sources */,
 				27BA30592BB2E9070043399B /* ContentView.swift in Sources */,
+				27D480C02BB4046700B8A6DA /* UserData.swift in Sources */,
+				27D480BE2BB3F1CD00B8A6DA /* SigninView.swift in Sources */,
 				27BA30632BB2E90B0043399B /* Hugsy.xcdatamodeld in Sources */,
 				27BA30572BB2E9070043399B /* HugsyApp.swift in Sources */,
+				27D480C42BB4050300B8A6DA /* Api.swift in Sources */,
+				2791801D2BB35D8600DBEA84 /* StartingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +484,7 @@
 				DEVELOPMENT_TEAM = DCAZQ9Q5D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hugsy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,6 +514,7 @@
 				DEVELOPMENT_TEAM = DCAZQ9Q5D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hugsy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
