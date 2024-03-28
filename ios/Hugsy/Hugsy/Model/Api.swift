@@ -57,12 +57,58 @@ class Api {
     static let checkUserNameURL = baseURL.appendingPathComponent("/api/check-username")
     static let checkPhoneNumberURL = baseURL.appendingPathComponent("/api/check-phonenumber")
     static let createUserURL = baseURL.appendingPathComponent("/api/users/create")
+    static let getProfileURL = baseURL.appendingPathComponent("/api/users/profile")
     
     // Session will used for Mocker tests
     private let session: URLSession
 
     init(session: URLSession = URLSession.shared) {
         self.session = session
+    }
+    
+    // MARK: - GET
+    func getProfileRequest(token: String, completion: @escaping (Result<Profile, Error>) -> Void){
+        
+        let url = Api.checkUserNameURL
+        
+        // Création de la requête
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        // Création de la tâche URLSession pour envoyer la requête
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                print("Code http de réponse : \(httpResponse.statusCode)")
+                // Gérer les différentes réponses HTTP
+                switch httpResponse.statusCode {
+                case 200:
+                    if let responseData = data {
+                        
+                        do {
+                            let jsonDecoder = JSONDecoder()
+                            let profile = try jsonDecoder.decode(Profile.self, from: responseData)
+                            completion(.success(profile))
+                            
+                        } catch {
+                            print("Erreur lors de la désérialisation JSON : \(error)")
+                            completion(.failure(error))
+                        }
+                    }
+                case 401:
+                    completion(.failure(ApiError.authenticationFailure))
+                    
+                default:
+                    completion(.failure(ApiError.unhandledResponse(httpResponse.statusCode)))
+                }
+            }
+        }
+        task.resume()        
     }
     
     // MARK: - POST
@@ -218,7 +264,7 @@ class Api {
         - authentification
         - erreur serveur
     */
-    func createNewUserRequest(user: UserData, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func createNewUserRequest(user: UserData, completion: @escaping (Result<String, Error>) -> Void) {
         
         let url = Api.createUserURL
         
@@ -255,8 +301,8 @@ class Api {
                             // Désérialisation du JSONen [Patient]
                             let jsonDecoder = JSONDecoder()
                             let isUserCreatedResponse = try jsonDecoder.decode(UserCreatedResponse.self, from: responseData)
-                            let isUserCreated = isUserCreatedResponse.isUserCreated
-                            completion(.success(isUserCreated))
+                            let token = isUserCreatedResponse.token
+                            completion(.success(token))
                             
                         } catch {
                             print("Erreur lors de la désérialisation JSON : \(error)")

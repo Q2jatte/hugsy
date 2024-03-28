@@ -29,18 +29,20 @@ struct SuccessSigninView: View {
             Button {
                 print("Go")
             } label: {
-                HStack {
-                    Text("Commencer")
-                    Image(systemName: "chevron.right")
+                NavigationLink(destination: HomeView()) {
+                    HStack {
+                        Text("Commencer")
+                        Image(systemName: "chevron.right")
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .textCase(.uppercase)
+                    .font(.title)
+                    .background(Color("petrole"))
+                    .cornerRadius(20)
+                    .shadow(color: Color("lightblack").opacity(0.1), radius: 8, x: 0, y: 8)
+                    .shadow(color: Color("lightblack").opacity(0.2), radius: 4, x: 0, y: 8)
                 }
-                .padding()
-                .foregroundColor(.white)
-                .textCase(.uppercase)
-                .font(.title)
-                .background(Color("petrole"))
-                .cornerRadius(20)
-                .shadow(color: Color("lightblack").opacity(0.1), radius: 8, x: 0, y: 8)
-                .shadow(color: Color("lightblack").opacity(0.2), radius: 4, x: 0, y: 8)
             }
             .scaleEffect(scaleFactor)
             .animation(.easeInOut(duration: 2).repeatForever(autoreverses: true), value: scaleFactor)

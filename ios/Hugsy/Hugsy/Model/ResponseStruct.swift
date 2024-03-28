@@ -16,5 +16,7 @@ struct PhoneNumberAvailabilityResponse: Codable {
 }
 
 struct UserCreatedResponse: Codable {
-    let isUserCreated: Bool
+    let token: String
 }
+
+

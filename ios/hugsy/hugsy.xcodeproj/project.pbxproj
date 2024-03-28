@@ -12,6 +12,9 @@
 		2779672D2BB47BA3009EB899 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779672C2BB47BA3009EB899 /* HomeView.swift */; };
 		277967302BB48223009EB899 /* LilitaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2779672F2BB48223009EB899 /* LilitaOne-Regular.ttf */; };
 		277967322BB48856009EB899 /* WallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277967312BB48856009EB899 /* WallView.swift */; };
+		2779674E2BB5DB10009EB899 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779674D2BB5DB10009EB899 /* Security.swift */; };
+		277967502BB5DC66009EB899 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779674F2BB5DC66009EB899 /* ProfileViewModel.swift */; };
+		277967522BB5DE1A009EB899 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277967512BB5DE1A009EB899 /* Profile.swift */; };
 		2791801D2BB35D8600DBEA84 /* StartingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791801C2BB35D8600DBEA84 /* StartingView.swift */; };
 		27BA30572BB2E9070043399B /* HugsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30562BB2E9070043399B /* HugsyApp.swift */; };
 		27BA30592BB2E9070043399B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30582BB2E9070043399B /* ContentView.swift */; };
@@ -51,6 +54,9 @@
 		2779672C2BB47BA3009EB899 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2779672F2BB48223009EB899 /* LilitaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LilitaOne-Regular.ttf"; sourceTree = "<group>"; };
 		277967312BB48856009EB899 /* WallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallView.swift; sourceTree = "<group>"; };
+		2779674D2BB5DB10009EB899 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		2779674F2BB5DC66009EB899 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		277967512BB5DE1A009EB899 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		2791801C2BB35D8600DBEA84 /* StartingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingView.swift; sourceTree = "<group>"; };
 		27BA30532BB2E9070043399B /* Hugsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hugsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BA30562BB2E9070043399B /* HugsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyApp.swift; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 				27D480BF2BB4046700B8A6DA /* UserData.swift */,
 				27D480C32BB4050300B8A6DA /* Api.swift */,
 				277967282BB42B9A009EB899 /* ResponseStruct.swift */,
+				2779674D2BB5DB10009EB899 /* Security.swift */,
+				277967512BB5DE1A009EB899 /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				27D480C12BB404A300B8A6DA /* UserViewModel.swift */,
+				2779674F2BB5DC66009EB899 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -347,10 +356,13 @@
 				27BA30632BB2E90B0043399B /* Hugsy.xcdatamodeld in Sources */,
 				277967322BB48856009EB899 /* WallView.swift in Sources */,
 				27BA30572BB2E9070043399B /* HugsyApp.swift in Sources */,
+				277967522BB5DE1A009EB899 /* Profile.swift in Sources */,
+				277967502BB5DC66009EB899 /* ProfileViewModel.swift in Sources */,
 				2779672B2BB46401009EB899 /* SuccessSigninView.swift in Sources */,
 				2779672D2BB47BA3009EB899 /* HomeView.swift in Sources */,
 				27D480C42BB4050300B8A6DA /* Api.swift in Sources */,
 				2791801D2BB35D8600DBEA84 /* StartingView.swift in Sources */,
+				2779674E2BB5DB10009EB899 /* Security.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

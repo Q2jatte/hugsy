@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,windows,xcode,symfony
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,xcode,symfony
 
+.env
+**/.env
+
 ### macOS ###
 # General
 .DS_Store

@@ -45,7 +45,6 @@ class UserViewModel: ObservableObject {
     private var api = Api()
     
     private func checkUserName(){
-        print("username : \(self.userName)")
         api.checkUserNameRequest(userName: self.userName) { result in
             switch result {
                 
@@ -104,13 +103,22 @@ class UserViewModel: ObservableObject {
             api.createNewUserRequest(user: newUser) { result in
                 switch result {
                     
-                case .success(let isUserCreated):
+                case .success(let token):
                     // Utilisation de DispatchQueue pour garantir que les modifications sont effectuées sur le thread principal
                     DispatchQueue.main.async {
                         // Met à jour le jeton dans l'instance utilisateur
-                        if isUserCreated {
+                        if (token != "") {
                             print("Utilisateur créé avec succès")
-                            self.successSignin = true
+                            
+                            // Enregistrement du token en Keychain
+                            let key = "AccessToken"
+                            if saveTokenToKeychain(token: token, forKey: key) {
+                                print("Token enregistré avec succès dans le Keychain.")
+                                // Success user and token
+                                self.successSignin = true
+                            } else {
+                                print("Impossible d'enregistrer le token dans le Keychain.")
+                            }
                         } else {
                             print("Utilisateur non créé")
                         }
