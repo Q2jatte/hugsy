@@ -4,5 +4,9 @@
 <dict>
 	<key>API_ROOT_URL</key>
 	<string>http://127.0.0.1:3037</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LilitaOne-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -21,7 +21,7 @@ class UserViewModel: ObservableObject {
         }
     }
     @Published var userNameInfo: String = "6 caractères minimum"
-    @Published var userNameIsValid: Bool = false
+    var userNameIsValid: Bool = false
     
     @Published var phoneNumber: String = "" {
         didSet {
@@ -35,15 +35,18 @@ class UserViewModel: ObservableObject {
         }
     }
     @Published var phoneNumberInfo: String = "C'est pour sécuriser ton compte"
-    @Published var phoneNumberIsValid: Bool = false
+    var phoneNumberIsValid: Bool = false
     
     @Published var TcIsChecked: Bool = false
+    
+    @Published var successSignin: Bool = false
     
     /// Instance du service API.
     private var api = Api()
     
     private func checkUserName(){
-        api.checkUserNameRequest(userName: userName) { result in
+        print("username : \(self.userName)")
+        api.checkUserNameRequest(userName: self.userName) { result in
             switch result {
                 
             case .success(let isUserNameAvailable):
@@ -95,7 +98,8 @@ class UserViewModel: ObservableObject {
     func registerNewUser(){
         if (userNameIsValid && phoneNumberIsValid && TcIsChecked) {
             
-            let newUser = UserData(userName: userName, phoneNumber: phoneNumber)
+            let randomPassword = randomPassword(length: 16)
+            let newUser = UserData(userName: userName, phoneNumber: phoneNumber, password: randomPassword)
             
             api.createNewUserRequest(user: newUser) { result in
                 switch result {
@@ -106,6 +110,7 @@ class UserViewModel: ObservableObject {
                         // Met à jour le jeton dans l'instance utilisateur
                         if isUserCreated {
                             print("Utilisateur créé avec succès")
+                            self.successSignin = true
                         } else {
                             print("Utilisateur non créé")
                         }
@@ -119,5 +124,10 @@ class UserViewModel: ObservableObject {
         } else {
             print("Données non valide")
         }
+    }
+    
+    private func randomPassword(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*!?"
+        return String((0..<length).map { _ in letters.randomElement()! })
     }
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		277967292BB42B9A009EB899 /* ResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277967282BB42B9A009EB899 /* ResponseStruct.swift */; };
+		2779672B2BB46401009EB899 /* SuccessSigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779672A2BB46401009EB899 /* SuccessSigninView.swift */; };
+		2779672D2BB47BA3009EB899 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779672C2BB47BA3009EB899 /* HomeView.swift */; };
+		277967302BB48223009EB899 /* LilitaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2779672F2BB48223009EB899 /* LilitaOne-Regular.ttf */; };
+		277967322BB48856009EB899 /* WallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277967312BB48856009EB899 /* WallView.swift */; };
 		2791801D2BB35D8600DBEA84 /* StartingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791801C2BB35D8600DBEA84 /* StartingView.swift */; };
 		27BA30572BB2E9070043399B /* HugsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30562BB2E9070043399B /* HugsyApp.swift */; };
 		27BA30592BB2E9070043399B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA30582BB2E9070043399B /* ContentView.swift */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		277967282BB42B9A009EB899 /* ResponseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStruct.swift; sourceTree = "<group>"; };
+		2779672A2BB46401009EB899 /* SuccessSigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSigninView.swift; sourceTree = "<group>"; };
+		2779672C2BB47BA3009EB899 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2779672F2BB48223009EB899 /* LilitaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LilitaOne-Regular.ttf"; sourceTree = "<group>"; };
+		277967312BB48856009EB899 /* WallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallView.swift; sourceTree = "<group>"; };
 		2791801C2BB35D8600DBEA84 /* StartingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingView.swift; sourceTree = "<group>"; };
 		27BA30532BB2E9070043399B /* Hugsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hugsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BA30562BB2E9070043399B /* HugsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugsyApp.swift; sourceTree = "<group>"; };
@@ -87,12 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2779672E2BB48203009EB899 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				27BA305A2BB2E90B0043399B /* Assets.xcassets */,
+				2779672F2BB48223009EB899 /* LilitaOne-Regular.ttf */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		2791801B2BB35D7400DBEA84 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				27BA30582BB2E9070043399B /* ContentView.swift */,
 				2791801C2BB35D8600DBEA84 /* StartingView.swift */,
 				27D480BD2BB3F1CD00B8A6DA /* SigninView.swift */,
+				2779672A2BB46401009EB899 /* SuccessSigninView.swift */,
+				2779672C2BB47BA3009EB899 /* HomeView.swift */,
+				277967312BB48856009EB899 /* WallView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,8 +147,8 @@
 				27D480BB2BB3E8B100B8A6DA /* ViewModel */,
 				2791801B2BB35D7400DBEA84 /* View */,
 				27BA30862BB2E9D00043399B /* Model */,
+				2779672E2BB48203009EB899 /* Assets */,
 				27BA305C2BB2E90B0043399B /* Preview Content */,
-				27BA305A2BB2E90B0043399B /* Assets.xcassets */,
 			);
 			path = Hugsy;
 			sourceTree = "<group>";
@@ -162,6 +184,7 @@
 				27BA30612BB2E90B0043399B /* Hugsy.xcdatamodeld */,
 				27D480BF2BB4046700B8A6DA /* UserData.swift */,
 				27D480C32BB4050300B8A6DA /* Api.swift */,
+				277967282BB42B9A009EB899 /* ResponseStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BA305E2BB2E90B0043399B /* Preview Assets.xcassets in Resources */,
+				277967302BB48223009EB899 /* LilitaOne-Regular.ttf in Resources */,
 				27BA305B2BB2E90B0043399B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,10 +341,14 @@
 				27BA30602BB2E90B0043399B /* Persistence.swift in Sources */,
 				27D480C22BB404A300B8A6DA /* UserViewModel.swift in Sources */,
 				27BA30592BB2E9070043399B /* ContentView.swift in Sources */,
+				277967292BB42B9A009EB899 /* ResponseStruct.swift in Sources */,
 				27D480C02BB4046700B8A6DA /* UserData.swift in Sources */,
 				27D480BE2BB3F1CD00B8A6DA /* SigninView.swift in Sources */,
 				27BA30632BB2E90B0043399B /* Hugsy.xcdatamodeld in Sources */,
+				277967322BB48856009EB899 /* WallView.swift in Sources */,
 				27BA30572BB2E9070043399B /* HugsyApp.swift in Sources */,
+				2779672B2BB46401009EB899 /* SuccessSigninView.swift in Sources */,
+				2779672D2BB47BA3009EB899 /* HomeView.swift in Sources */,
 				27D480C42BB4050300B8A6DA /* Api.swift in Sources */,
 				2791801D2BB35D8600DBEA84 /* StartingView.swift in Sources */,
 			);
@@ -485,6 +513,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hugsy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -515,6 +544,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hugsy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

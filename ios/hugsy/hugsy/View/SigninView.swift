@@ -4,6 +4,7 @@
 //
 //  Created by Eric Terrisson on 27/03/2024.
 //
+// Formulaire de création de compte
 
 import SwiftUI
 
@@ -13,60 +14,65 @@ struct SigninView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Choisis ton pseudo")
-                    .font(.title)
-                    .foregroundColor(Color("marine"))
-                TextField("Albator84", text: $viewModel.userName)
-                    .padding()
-                    .background(.white)
-                    .cornerRadius(20)
-                    
-                Text(viewModel.userNameInfo)
-                    .foregroundColor(.gray)
-                
-                Text("Ajoute un n° de téléphone")
-                    .font(.title)
-                    .foregroundColor(Color("marine"))
-                TextField("0612345678", text: $viewModel.phoneNumber)
-                    .keyboardType(.phonePad) // numeric keyboard
-                    .padding()
-                    .background(.white)
-                    .cornerRadius(20)
-                    
-                Text(viewModel.phoneNumberInfo)
-                    .foregroundColor(.gray)
-                
-                Toggle(isOn: $viewModel.TcIsChecked) {
-                            Text("J'accèpte les conditions générales d'utilisation")
-                                .font(.title)
-                                .foregroundColor(Color("marine"))
-                        }
-                        .padding()
-                
-                Image("smartphone-shield")
-                    .resizable()
-                    .scaledToFit()
-                
-                Spacer()
-                
-                
-                
-                Button(action: {
-                    // Submit form
-                    submitForm()
-                }) {
-                    Text("Valider")
-                        .padding()
-                        .textCase(.uppercase)
+            
+            if (viewModel.successSignin) {
+                SuccessSigninView()                
+            } else {
+                VStack {
+                    Text("Choisis ton pseudo")
                         .font(.title)
-                        .foregroundColor(.white)
-                        .background(Color("petrole"))
+                        .foregroundColor(Color("marine"))
+                    TextField("Albator84", text: $viewModel.userName)
+                        .autocapitalization(.none)
+                        .padding()
+                        .background(.white)
                         .cornerRadius(20)
+                    
+                    Text(viewModel.userNameInfo)
+                        .foregroundColor(.gray)
+                    
+                    Text("Ajoute un n° de téléphone")
+                        .font(.title)
+                        .foregroundColor(Color("marine"))
+                    TextField("0612345678", text: $viewModel.phoneNumber)
+                        .keyboardType(.phonePad) // numeric keyboard
+                        .padding()
+                        .background(.white)
+                        .cornerRadius(20)
+                    
+                    Text(viewModel.phoneNumberInfo)
+                        .foregroundColor(.gray)
+                    
+                    Toggle(isOn: $viewModel.TcIsChecked) {
+                        Text("J'accèpte les conditions générales d'utilisation")
+                            .font(.title)
+                            .foregroundColor(Color("marine"))
+                    }
+                    .padding()
+                    
+                    Image("smartphone-shield")
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Spacer()
+                    
+                    
+                    Button(action: {
+                        // Submit form
+                        submitForm()
+                    }) {
+                        Text("Valider")
+                            .padding()
+                            .textCase(.uppercase)
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .background(Color("petrole"))
+                            .cornerRadius(20)
+                    }
                 }
+                .padding()
+                .background(Color("anis"))
             }
-            .padding()
-            .background(Color("anis"))
         }
         .navigationBarBackButtonHidden(true)
         

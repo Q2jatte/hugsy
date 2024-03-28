@@ -90,47 +90,51 @@ class Api {
         do {
             let jsonData = try JSONEncoder().encode(["userName": userName])
             request.httpBody = jsonData
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            // Création de la tâche URLSession pour envoyer la requête
+            let task = session.dataTask(with: request) { (data, response, error) in
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("Code http de réponse : \(httpResponse.statusCode)")
+                    
+                    // Gérer les différentes réponses HTTP
+                    switch httpResponse.statusCode {
+                    case 200:
+                        if let responseData = data {
+                            do {
+                                // Désérialisation du JSONen [Patient]
+                                let jsonDecoder = JSONDecoder()
+                                let isUserNameAvailableResponse = try jsonDecoder.decode(UserNameAvailabilityResponse.self, from: responseData)
+                                let isUserNameAvailable = isUserNameAvailableResponse.isUserNameAvailable
+                                completion(.success(isUserNameAvailable))
+                                
+                            } catch {
+                                print("Erreur lors de la désérialisation JSON : \(error)")
+                                completion(.failure(error))
+                            }
+                        }
+                        
+                    case 401:
+                        completion(.failure(ApiError.authenticationFailure))
+                        
+                    default:
+                        completion(.failure(ApiError.unhandledResponse(httpResponse.statusCode)))
+                    }
+                }
+            }
+            task.resume()
         } catch {
             print("Erreur lors de l'encodage JSON : \(error)")
             completion(.failure(error))
             return
         }
         
-        // Création de la tâche URLSession pour envoyer la requête
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            if let httpResponse = response as? HTTPURLResponse {
-                print("Code http de réponse : \(httpResponse.statusCode)")
-                
-                // Gérer les différentes réponses HTTP
-                switch httpResponse.statusCode {
-                case 200:
-                    if let responseData = data {
-                        do {
-                            // Désérialisation du JSONen [Patient]
-                            let jsonDecoder = JSONDecoder()
-                            let isUserNameAvailable = try jsonDecoder.decode(Bool.self, from: responseData)
-                            completion(.success(isUserNameAvailable))
-                            
-                        } catch {
-                            print("Erreur lors de la désérialisation JSON : \(error)")
-                            completion(.failure(error))
-                        }
-                    }
-                    
-                case 401:
-                    completion(.failure(ApiError.authenticationFailure))
-                    
-                default:
-                    completion(.failure(ApiError.unhandledResponse(httpResponse.statusCode)))
-                }
-            }
-        }
-        task.resume()
+        
     }
     
     /**
@@ -152,6 +156,7 @@ class Api {
         // Création de la requête
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         // Encodage du numéro de téléphone en JSON et l'ajouter dans le corps de la requête
         do {
@@ -180,7 +185,8 @@ class Api {
                         do {
                             // Désérialisation du JSONen [Patient]
                             let jsonDecoder = JSONDecoder()
-                            let isPhoneNumberAvailable = try jsonDecoder.decode(Bool.self, from: responseData)
+                            let isPhoneNumberAvailableResponse = try jsonDecoder.decode(PhoneNumberAvailabilityResponse.self, from: responseData)
+                            let isPhoneNumberAvailable = isPhoneNumberAvailableResponse.isPhoneNumberAvailable
                             completion(.success(isPhoneNumberAvailable))
                             
                         } catch {
@@ -219,6 +225,7 @@ class Api {
         // Création de la requête
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         // Encodage du user en JSON et l'ajouter dans le corps de la requête
         do {
@@ -247,7 +254,8 @@ class Api {
                         do {
                             // Désérialisation du JSONen [Patient]
                             let jsonDecoder = JSONDecoder()
-                            let isUserCreated = try jsonDecoder.decode(Bool.self, from: responseData)
+                            let isUserCreatedResponse = try jsonDecoder.decode(UserCreatedResponse.self, from: responseData)
+                            let isUserCreated = isUserCreatedResponse.isUserCreated
                             completion(.success(isUserCreated))
                             
                         } catch {
@@ -256,8 +264,8 @@ class Api {
                         }
                     }
                     
-                case 401:
-                    completion(.failure(ApiError.authenticationFailure))
+                case 400:
+                    completion(.failure(ApiError.invalidData))
                     
                 default:
                     completion(.failure(ApiError.unhandledResponse(httpResponse.statusCode)))

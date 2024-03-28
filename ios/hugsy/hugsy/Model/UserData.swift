@@ -10,5 +10,6 @@ import Foundation
 struct UserData: Identifiable, Codable {
     let id = UUID()
     let userName: String?
-    let phoneNumber: String?    
+    let phoneNumber: String?
+    let password: String?
 }
